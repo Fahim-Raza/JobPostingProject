@@ -1,12 +1,14 @@
 const express = require('express')
-const create = require('../../users/controller')
-const router =express.Router()
+const {create, all_users} = require('../../users/controller')
+const router = express.Router()
 
 
 router
     .route('/create')
-        .post(create)
+    .post(create)
 
+router
+    .route('/users')
+    .get(all_users)
 
-
-module.exports =router
+module.exports = router

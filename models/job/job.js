@@ -1,4 +1,5 @@
 const mongoose = require('mongoose')
+const Types = mongoose
 
  const jobSchema = mongoose.Schema({
 
@@ -18,7 +19,7 @@ const mongoose = require('mongoose')
         },
         user_id:[{
             //mongoose.types.objectid
-            type: mongoose.Types.ObjectId,
+            type: Types.ObjectId,
             ref:"User"
 
         }]
