@@ -6,22 +6,19 @@ const userSchema = mongoose.Schema({
     
     email:{
         type: String,
-        requried:  [true,"please enter email"]
+        requried:  [true, "Please enter email"]
     },
     password:{
         type: String,
-        requried: [true,"please enter password"]
+        requried: [true, "Please enter password"]
     },
     firstName:{
-        type: String,
-        
+        type: String
     },
     lastName:{
-        type: String,
-        
+        type: String
     },
     jobs:[{
-
         type: Types.ObjectId,
         ref:"Job"
     }]
